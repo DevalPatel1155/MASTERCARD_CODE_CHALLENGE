@@ -12,6 +12,9 @@ public class ConnectedCities {
     @GetMapping("/connected")
     @ResponseBody
     public String connectedCities(@RequestParam String origin, @RequestParam String destination) {
+        /*this method takes two arugments orgin and destination from the url
+        and pass them to getPath method of path to class
+        which will return "yes" if the cities are connected else return "no".*/
             Path path= new Path(origin,destination);
             return path.getPath(origin,destination);
       }
